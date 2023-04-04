@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,10 +8,9 @@ session_start();
 </head>
 <body>
   <?php
-    if (isset($_SESSION['message']) && $_SESSION['message'])
-    {
-      printf('<b>%s</b>', $_SESSION['message']);
-      unset($_SESSION['message']);
+    if (isset($_SESSION['message']) && $_SESSION['message']) {  // Si el mensaje existe y no está vacío
+      printf('<b>%s</b>', $_SESSION['message']);  // Imprime el mensaje
+      unset($_SESSION['message']);  // Elimina el mensaje
     }
   ?>
   <form method="POST" action="upload.php" enctype="multipart/form-data">
@@ -24,3 +23,4 @@ session_start();
   </form>
 </body>
 </html>
+
